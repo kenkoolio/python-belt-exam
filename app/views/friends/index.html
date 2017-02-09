@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang='en'>
   <head>
-    <title>Friends</title>
+    <title>Python Friends</title>
     <meta charset='UTF-8'>
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -38,7 +38,7 @@
               {%for friend in friends%}
               <tr>
               <td>{{friend['friendAlias']}}</td>
-              <td><a href='/user/{{friend['friendID']}}'>View Profile</a> <a href='/remove/{{friend['friendID']}}'>Remove as Friend</a></td>
+              <td><a href='/user/{{friend["friendID"]}}'>View Profile</a> <a href='/remove/{{friend["friendID"]}}'>Remove as Friend</a></td>
               </tr>
               {%endfor%}
             </tbody>
@@ -63,8 +63,8 @@
           {%for nonFriend in nonFriends%}
 
             <tr>
-            <td><a href='/user/{{nonFriend['user_id']}}'>{{nonFriend['myAlias']}}</a></td>
-            <td><a href='/add_friend/{{nonFriend['myID']}}'>Add as friend</a></td>
+            <td><a href='/user/{{nonFriend["myID"]}}'>{{nonFriend['myAlias']}}</a></td>
+            <td><a href='/add_friend/{{nonFriend["myID"]}}'>Add as friend</a></td>
             </tr>
 
           {%endfor%}
