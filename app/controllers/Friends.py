@@ -17,7 +17,7 @@ class Friends(Controller):
         data={
             'name' : request.form['name'],
             'alias' : request.form['alias'],
-            'email' : request.form['email'],
+            'email' : request.form['email'].lower(),
             'password' : request.form['password'],
             'password2' : request.form['password2'],
             'birthday' : request.form['birthday']
@@ -34,7 +34,7 @@ class Friends(Controller):
 
     def login(self):
         data = {
-            'email' : request.form['email'],
+            'email' : request.form['email'].lower(),
             'password' : request.form['password']
         }
 
